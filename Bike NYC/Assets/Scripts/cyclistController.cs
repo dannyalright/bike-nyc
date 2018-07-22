@@ -23,12 +23,7 @@ public class cyclistController : MonoBehaviour {
 	// Update is called at a fixed time interval
 	// Contain all physics-related code in here
 	void FixedUpdate() {
-		// bool cycling = Input.GetButton("Fire1");
-		// if (cycling) {
-		// 	playerRigidbody.AddForce(new Vector2(0, cyclistSpeed));
-		// }
-
-		playerRigidbody.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * cyclistSpeed, 0.8f),
-		Mathf.Lerp(0, Input.GetAxis("Vertical" ) * cyclistSpeed, 0.6f));
+		// playerRigidbody.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * cyclistSpeed, 0.8f),
+		// Mathf.Lerp(0, Input.GetAxis("Vertical" ) * cyclistSpeed, 0.6f));
 	}
 }
