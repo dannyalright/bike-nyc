@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class cyclistController : MonoBehaviour {
 
-	public float cyclistSpeed = 60.0f;
+	public float cyclistSpeed = 20.0f;
+	// public float cyclistSpeedY = cyclistSpeed * 0.2f;
 
 	private Rigidbody2D playerRigidbody;
 
@@ -27,6 +28,7 @@ public class cyclistController : MonoBehaviour {
 		// 	playerRigidbody.AddForce(new Vector2(0, cyclistSpeed));
 		// }
 
-		playerRigidbody.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * cyclistSpeed, 0.8f), Mathf.Lerp(0, Input.GetAxis("Vertical")* cyclistSpeed, 0.8f));
+		playerRigidbody.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal") * cyclistSpeed, 0.8f),
+		Mathf.Lerp(0, Input.GetAxis("Vertical" ) * cyclistSpeed, 0.6f));
 	}
 }
